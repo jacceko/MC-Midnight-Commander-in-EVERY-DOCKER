@@ -1,0 +1,20 @@
+#!/bin/sh
+# EXECUTE MC IN CONTAINER IF MC NOT EXIST, MC WILL BE INSTALLED DEPEND ON SYSTEM DEBIAN/UBI/ALPINE/CENTOS/UBUNTU AND THEN EXECUTE MC
+# IF ALL WORK OK - YOU WILL SEE MC BLUE SCREEN AND ON BOTTOM YOU SEE root@docker-XXXXX some number - THIS MEAN YOUR MC ARE IN DOCKER
+# TO COPY FILES FROM TO OUTSIDE DOCKER IN DOCKER YOU CAN ADD VOLUME NAME FOR EX. /exchange - MAPPED TO YOUR HOST SYSTEM LOCAL FOLDER
+# LICENSE - MIT
+if ! docker exec -it $1  /bin/sh -c "command -v mc" >/dev/null 2>&1; then
+	if docker exec -it $1  /bin/sh -c "command -v apt" >/dev/null 2>&1; then
+		echo "MC not Found - install mc by apt-get - debian/ubuntu"
+		docker exec -it $1 /bin/sh -c "apt-get update && apt-get install -y mc &&  mc"
+    elif docker exec -it $1  /bin/sh -c "command -v apk" >/dev/null 2>&1; then
+		echo "MC not Found - install mc by apk - alpine"
+		docker exec -it $1  /bin/sh -c "apk add --no-cache mc && mc"
+	elif  docker exec -it $1  /bin/sh -c "command -v yum" >/dev/null 2>&1; then
+		echo "MC not Found - install mc by yum - ubi/centos"
+		docker exec -it $1  /bin/sh -c "yum update && yum install -y mc && mc"		
+    fi
+else
+    echo "MC found"
+    docker exec -it $1 /bin/bash -c "mc"
+fi
