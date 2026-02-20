@@ -6,11 +6,11 @@ If you ever want to copy files inside working container or to/from container to 
 
 **USAGE**
 
-	Before first use: chmod u+x mcd.sh
+	Before first use:  chmod u+x mcd.sh
 
-	Normal usage: ./mcd.sh CONTAINER_NAME
+	Normal usage:      ./mcd.sh CONTAINER_NAME
 
-	Example:      ./mcd.sh nginx
+	Example:           ./mcd.sh nginx
 
  
 **HOW IT WORK:**
