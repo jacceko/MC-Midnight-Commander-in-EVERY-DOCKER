@@ -15,7 +15,7 @@ If you ever want to copy files inside working container or to/from container to 
  
 **HOW IT WORK:**
 
-This script execute mc in container if mc not exist, mc will be installed in proper way depend on system debian/ubi/alpine/centos/ubuntu and then execute mc
+This script execute mc in container if mc not exist, mc will be installed in proper way depend on container system debian/ubi/alpine/centos/ubuntu and then execute mc
 
 If all work ok - you will see mc blue screen and on bottom you see root@docker-xxxxx some number - this mean your mc are in docker
 
