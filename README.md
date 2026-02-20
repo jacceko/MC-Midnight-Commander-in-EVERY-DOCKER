@@ -4,7 +4,7 @@ Script in bash for Auto exec/install Midnight Commander in your apps dockers con
 
 If you ever want to copy files inside working container or to/from container to host in easy way, you may want to have mc in every container.
 
-**USAGE** it execute mc, if no mc in container will install it
+**USAGE** it execute mc, if no mc in container, then auto install it and then execute mc
 
 	Before first use:  chmod u+x mcd.sh
 
