@@ -17,4 +17,4 @@ This script execute mc in container if mc not exist, mc will be installed in pro
 
 If all work ok - you will see mc blue screen and on bottom you see root@docker-xxxxx some number - this mean your mc are in docker
 
-To copy files from to outside docker in docker you can add volume name for ex. "/exchange" - mapped to your host system local folder
+To copy files from to outside docker in docker you can add volume name for ex. "/exchange" - mapped to your host system local folder to use it for exchange with all your docker containers
