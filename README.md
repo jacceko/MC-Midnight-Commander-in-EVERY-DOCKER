@@ -6,9 +6,9 @@ If you ever want to copy files inside working container or to/from container to 
 
 **USAGE**
 
-	Before first use: sudo chmod u+x mcd
+	Before first use: sudo chmod u+x mcd.sh
 
-	Normal usage: ./mcd CONTAINER_NAME
+	Normal usage: ./mcd.sh CONTAINER_NAME
 
  
 **HOW IT WORK:**
